@@ -80,7 +80,7 @@ Number.defaultProps = {
   suffix: "",
 };
 Number.propTypes = {
-  value: propTypes.oneOfType(propTypes.string, propTypes.number),
+  value: propTypes.oneOfType([propTypes.string, propTypes.number]),
   isSuffixPlural: propTypes.bool,
   onChange: propTypes.func,
   placeholder: propTypes.string,
