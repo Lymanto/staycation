@@ -15,7 +15,6 @@ import BookingInformation from "parts/Checkout/BookingInformation";
 import Payment from "parts/Checkout/Payment";
 import Completed from "parts/Checkout/Completed";
 
-import ItemDetails from "json/itemDetails.json";
 import { submitBooking } from "store/actions/checkout";
 class Checkout extends Component {
   state = {
@@ -73,6 +72,7 @@ class Checkout extends Component {
   render() {
     const { data } = this.state;
     const { checkout, page } = this.props;
+
     if (!checkout) {
       return (
         <div className="container">
@@ -168,7 +168,7 @@ class Checkout extends Component {
                     type="link"
                     isBlock
                     isLight
-                    href={`properties/${ItemDetails._id}`}
+                    href={`properties/${checkout._id}`}
                   >
                     Cancel
                   </Button>
